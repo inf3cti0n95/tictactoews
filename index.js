@@ -1,7 +1,7 @@
 "use strict";
 exports.__esModule = true;
 var uws_1 = require("uws");
-var gameServer = new uws_1.Server({ port: 8000 });
+var gameServer = new uws_1.Server({ port: process.env.PORT || 8000 });
 var clients = [];
 gameServer.on('connection', function (client) {
     clients.push(client);
